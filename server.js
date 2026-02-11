@@ -26,7 +26,7 @@ app.post("/chat", async (req, res) => {
           content: `Jogador ${playerName}: ${message}`
         }
       ],
-      max_tokens: 120
+      max_tokens: 150
     });
 
     res.json({
@@ -35,7 +35,7 @@ app.post("/chat", async (req, res) => {
 
   } catch (error) {
     console.error(error);
-    res.status(500).json({ reply: "Erro na mente do sábio..." });
+    res.status(500).json({ reply: "A mente do sábio está confusa..." });
   }
 });
 
